@@ -1,0 +1,58 @@
+#header{
+	background: #f0f0f0;
+}
+.header-body{
+	background-color: #f0f0f0;
+	height: 151px;
+}
+.body-left{
+	float: left;
+	line-height: 150px;
+	width: 23%;
+}
+.body-left h{
+	font-size: 25px;
+}
+.body-right{
+	float: left;
+	width: 70%;
+}
+.search{
+	margin-top: 55px;
+}
+.input-group-lg{
+	font-size: 17px;
+	height:40px;
+	width:60%;
+	border:2px solid #00a2ca;
+}
+a.addon{
+	display: inline-block;
+	position: absolute;
+}
+.addon{
+	height: 44px;
+	line-height: 40px;
+	font-size:17px;
+	padding: 0 10px;
+	background-color: #00a2ca;
+}
+.addon-right{
+	font-size:17px;
+	padding:10px 10px;
+	border: 1px solid #00a2ac;
+	background-color: #fff;
+	color: #00a2ac;
+	margin-left: 10px;
+}
+.keyword{
+	padding-top: 5px;
+	color: #919191;
+}
+.keyword ul{
+	display: inline-block;
+}
+.keyword a{
+	color: #00a2ac;
+	
+}

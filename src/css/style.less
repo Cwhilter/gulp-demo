@@ -1,0 +1,98 @@
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-size: 14px;
+  font-family:"Microsoft Yahei";
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: #fff;
+  background-color: transparent;
+  text-decoration: none;
+  &:active,
+  &:hover{
+    outline:0;
+  }
+}
+/* a:active,
+a:hover {
+  outline: 0;
+} */
+li{
+	display: inline-block;
+}
+.container{
+	margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+span{
+	display: inline-block;
+}
+.breadcrumb{
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #fff;
+  border-radius: 4px;
+  a {
+    color: #4169E1;
+  }
+  >li{
+    display: inline-block;
+    +li{
+    &:before{
+      padding: 0 5px;
+      color: #ccc;
+      content: ">>\00a0";
+    }
+  }
+  }
+  
+  .active{
+    color: #777;
+  }
+}
+
+
+/* 
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.breadcrumb a{
+  
+}
+.breadcrumb > li {
+  
+}
+.breadcrumb > li + li:before {
+  
+}
+.breadcrumb > .active {
+  
+} */

@@ -1,0 +1,201 @@
+﻿#header-footer{
+	border-top: 2px solid #f0f0f0;
+	border-bottom: 2px solid #f0f0f0;
+	height: 50px;
+}
+.header-footer-body li{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-right: 20px;
+}
+.header-footer-body li:hover{
+	border-bottom: 3px solid #00a2ac;
+}
+.header-footer-body a{
+	color: #00a2ac;
+}
+.header-footer-left{
+	float: left;
+}
+.header-footer-right{
+    float:right; 
+}
+
+/* 左侧导航栏样式 */
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon {
+  color: rgb(140,140,140);
+  font-size: 11px;
+  float: right;
+  top: 1px;
+  padding-top: 10px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-chevron-up:before {
+  content: "\e113";
+}
+.glyphicon-chevron-down:before {
+  content: "\e114";
+}
+.dropdown {
+    margin-top: 20px;
+    float: left;
+    width: 20%;
+    background-color: #f0f0f0;
+    a{
+    	display: block;
+	    color: #000;
+	    padding:0px 15px;
+    }
+    li{
+		display: block;
+		position: relative;
+		height: 35px;
+		line-height: 35px;
+		border-bottom: 1px solid #fff; 
+	}
+}
+
+.dropdown-header{
+    height: 35px;
+    position: relative;
+    border-bottom: 1px solid #fff;
+    padding:10px 15px;
+}
+.action{
+	background-color: #00a2ac;
+	color: #fff;
+}
+.table-left{
+	line-height: 35px;
+    float: left;
+}
+.dropdown-header:hover{
+	cursor: pointer;
+}
+.table-right{
+	line-height: 35px;
+    float: right;
+}
+.icon{
+	margin-top: 7px;
+}
+.icon-bar{
+    background-color: rgb(140,140,140);
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 5px;
+    margin:4px 0;
+}
+.dropdown-all{
+	position: absolute;
+	width: 300px;
+	height: 500px;
+	overflow: scroll;
+	display: none;
+	border: 1px solid #00a2ac;
+	left: 0;
+	top: 55px;
+	background-color: #f0f0f0;
+	z-index: 1;
+}		
+.dropdown-all-left{
+	display: inline;
+	float: left;
+	width: 50%;
+	
+}
+.dropdown-all .dropdown-all-left>li{
+	display: block;
+    color: #808080;
+    height: 35px;
+	line-height: 35px;
+    padding:0px 15px;
+}
+.dropdown-all .dropdown-all-left li{
+	display: block;
+	height: 35px;
+	line-height: 35px;
+	padding:0px 15px;
+	border: none;
+}
+.dropdown-all .dropdown-all-left li > a{
+	padding: 0 0;
+}
+.dropdown-all-right{
+	float: right;
+	
+}
+.dropdown-table:hover{
+    cursor: pointer;
+    background-color: #d8e0e9;
+}
+.open{
+	background-color: #d8e0e9;
+}
+span.dropdown-title{
+	display: block;
+	height: 35px;
+	line-height: 35px;
+	border-bottom: 1px solid #fff; 
+	color: #999;
+	padding:0px 15px;
+}
+.dropdown-table ul{
+	display: none;
+}
+.dropdown li.dropdown-table{
+	height: auto;
+}
+/* 二级导航*/
+.dropdown-table2{
+	background-color: #f0f0f0;
+}
+.dropdown-table .dropdown-table2>a{
+	padding-left: 25px; 
+}
+.dropdown-table2 ul{
+	display: none;
+}
+.dropdown-table li.dropdown-table2{
+	height: auto;
+}
+/* 三级导航栏 */
+.dropdown-table3{
+	background-color: #f0f0f0;
+}
+.dropdown-table-active{
+	border-left: 2px solid #00a2ac;
+	color: #00a2ac;
+	background: #fff;
+}
+.dropdown-table li.dropdown-table3{
+	position: relative; 
+    border-bottom: 1px solid #fff; 
+    
+}
+.dropdown-table2 .dropdown-table3>a{
+	color: #555;
+	padding-left: 35px; 
+}
+.dropdown-table .dropdown-table3 a:hover{
+	color: #00a2ac;
+}
+.content{
+    margin-top: 20px;
+    float:left;
+    width:75%;
+    margin-left:30px;
+}

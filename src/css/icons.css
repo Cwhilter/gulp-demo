@@ -1,0 +1,30 @@
+.icons{
+	background: url("../slices/all.png");
+	width: 200px;
+	height: 200px;
+}
+.bg{
+	width: 200px;
+	height: 200px;
+	background: url("../slices/add.png");
+}
+.bg2{
+	width: 200px;
+	height: 200px;
+	background: url("../slices/folder.png"); 
+}
+.bg3{
+	width: 200px;
+	height: 200px;
+	background: url("../slices/refresh.png");
+}
+.bg4{
+	width: 200px;
+	height: 200px;
+	background: url("../slices/warning.png");
+}
+.bg5{
+	width: 200px;
+	height: 200px;
+	background: url("../slices/Category.png");
+}

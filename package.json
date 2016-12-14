@@ -1,0 +1,17 @@
+{
+  "name": "gulp-demo",
+  "version": "1.0.0",
+  "description": "gulp任务构建demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wp",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^3.3.0"
+  }
+}
