@@ -19,5 +19,5 @@
 		gulp.dest()为stream写路径
 		.on()为任务绑定事件，异步执行
 
-插件可到npm官方网站https://www.npmjs.com/查找
-也可到gulp网站http://gulpjs.com/plugins/查找
+插件可到npm官方网站https://www.npmjs.com/ 查找
+也可到gulp网站http://gulpjs.com/plugins/ 查找
