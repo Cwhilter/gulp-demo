@@ -1,20 +1,26 @@
 var gulp=require('gulp');
 var src=process.cwd()+'/src';
 var assets=process.cwd()+'/assets';
+//构建css，顺序为clean->copy(slices)->less->sprite->cssmin->clean-slices
+
+//css构建完成删除中间产物slices
 gulp.task('clean-slices',function(){
 	var clean=require('gulp-clean');
 	return gulp.src(assets+'/slices')
 		.pipe(clean());
 });
+//构建初始清理工作目录
 gulp.task('clean',function(){
 	var clean=require('gulp-clean');
 	return gulp.src(assets)
 		.pipe(clean());
 });
+//复制slices到assets/slices，在这之前先执行clean(异步执行)
 gulp.task('copy',['clean'],function(){
 	return gulp.src(src+'/slices/*')
 		.pipe(gulp.dest(assets+'/slices'));
 });
+//编译所有css、less文件
 gulp.task('less',['copy'],function(){
 	var less=require('gulp-less');
 	var concat=require('gulp-concat');
@@ -23,11 +29,12 @@ gulp.task('less',['copy'],function(){
 		.pipe(concat('style.css'))
 		.pipe(gulp.dest(assets+'/css'));
 });
+//自动生成雪碧图和相应的css文件
 gulp.task('sprite',['less'],function(){
 	var time=new Date();
 	var sprite=require('gulp-css-spritesmith');
 	var cssmin=require('gulp-cssmin');
-	var base64=require('gulp-css-base64');
+	//var base64=require('gulp-css-base64');
 	return gulp.src(assets+'/css/*.css')
 		.pipe(sprite({
 	        // sprite背景图源文件夹，只有匹配此路径才会处理，默认 images/slice/
@@ -51,6 +58,7 @@ gulp.task('sprite',['less'],function(){
 	    }))  
         .pipe(gulp.dest('./'));
 });
+//最后对完成的css文件压缩，并清理中间产物
 gulp.task('cssmin',['sprite'],function(){
 	var cssmin=require('gulp-cssmin');
 	return gulp.src(assets+'/css/*.css')
@@ -59,4 +67,12 @@ gulp.task('cssmin',['sprite'],function(){
 		.on('end',function(){
 			gulp.start('clean-slices')
 		});
-})
+})；
+//将css加上10位md5，并修改html中的引用路径，该动作依赖cssmin
+gulp.task('md5:css', ['cssmin'], function (done) {
+	var md5=require('gulp-md5-plus');
+    gulp.src(assets+'/css/*.css')
+        .pipe(md5(10, assets+'/app/*.html'))
+        .pipe(gulp.dest(assets+'/css'))
+        .on('end', done);
+});
